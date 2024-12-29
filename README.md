@@ -1,0 +1,2 @@
+# omestredacor
+Site em wordpress
