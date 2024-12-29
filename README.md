@@ -1,4 +1,4 @@
-# 🌟 WM - Portal Educacional para Cabeleireiros e Donos de Cosméticos 🌟
+# 🌟 O Mestre da Cor - Portal Educacional para Cabeleireiros e Donos de Cosméticos 🌟
 
 Um portal educacional responsivo, desenvolvido em **WordPress**, para capacitar cabeleireiros e donos de cosméticos. Nosso objetivo é oferecer um ambiente moderno, elegante e funcional para acessar cursos, materiais didáticos e ferramentas de gestão no setor de beleza.
 
