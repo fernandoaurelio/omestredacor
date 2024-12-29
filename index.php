@@ -12,7 +12,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-	<header>
+	<header id="custom-header">
 		<section class="header-container">
 			<div class="header-logo">
 				<p>O Mestre da Cor</p>
@@ -49,7 +49,7 @@
 					<a href="#">Acessar Curso</a>
 				</div>
 			</div>
-						<div class="course-card">
+			<div class="course-card">
 				<div class="card-header">
 					<img src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Cabeleireiro em ação">
 				</div>
@@ -59,7 +59,7 @@
 					<a href="#">Acessar Curso</a>
 				</div>
 			</div>
-						<div class="course-card">
+			<div class="course-card">
 				<div class="card-header">
 					<img src="https://fastly.picsum.photos/id/20/3670/2462.jpg?hmac=CmQ0ln-k5ZqkdtLvVO23LjVAEabZQx2wOaT4pyeG10I" alt="Cabeleireiro em ação">
 				</div>
@@ -102,6 +102,27 @@
 			</form>
 		</div>
 	</footer>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	<section class="modal-home">
+		<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content modal-custom">
+      <!-- Cabeçalho do modal -->
+      <div class="modal-header modal-header-custom">
+        <h5 class="modal-title" id="loginModalLabel">Portal Mestre da Cor</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <!-- Corpo do modal -->
+      <div class="modal-body">
+
+    </div>
+  </div>
+</div>
+
+	</section>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	
+	<script src="js/actions.js"></script>
 </body>
 </html>

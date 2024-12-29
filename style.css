@@ -50,7 +50,7 @@ a {
 a:hover {
   text-decoration: underline;
 }
-header{
+#custom-header{
   background-color: var(--light-gray);
   width: 100%;
   padding: 10px 20px;
@@ -104,6 +104,71 @@ header{
   background-color:var(--soft-beige); /* Cor ao passar o mouse */
   color: var(--text-dark);
 }
+ /* Estilo geral do modal */
+  .modal-custom {
+    background-color: #F9F9F9;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  /* Cabeçalho do modal */
+  .modal-header-custom {
+    border-bottom: none;
+    text-align: center;
+    padding-bottom: 0;
+  }
+
+  .modal-header-custom .modal-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333333;
+  }
+
+  /* Estilo dos inputs */
+  .form-input {
+    border: 1px solid #CCCCCC;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 14px;
+    color: #333333;
+    background-color: #FFFFFF;
+    box-shadow: none;
+  }
+
+  .form-input:focus {
+    border-color: #D4AF37;
+    outline: none;
+  }
+
+  /* Link de cadastro */
+  .form-link {
+    color: #D4AF37;
+    font-size: 14px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+
+  .form-link:hover {
+    color: #B28F2C;
+  }
+
+  /* Botão de enviar */
+  .btn-custom {
+    background-color: #D4AF37;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .btn-custom:hover {
+    background-color: #B28F2C;
+  }
 #cards {
   padding: 20px;
   background-color: #f9f9f9; /* Cor de fundo para destaque */
