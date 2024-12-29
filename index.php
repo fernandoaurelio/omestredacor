@@ -4,6 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>O Mestre da Cor</title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="style.css">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,6 +30,7 @@
 			</div>
 		</section>
 	</header>
+
 	<section id="banner">
 
 		<div class="banner-container">
@@ -94,12 +96,12 @@
 		<div class="footer-newsletter">
 			<h3>Receba Novidades</h3>
 			<p>Assine nossa newsletter e fique por dentro das novidades.</p>
-			<form>
-				<input type="email" placeholder="Seu e-mail" required>
-				<button type="submit">Inscrever-se</button>
+			<form id="formnews">
+				<input id="emailnews" type="email" placeholder="Seu e-mail" required>
+				<a href="#">Inscrever-se</a>
 			</form>
 		</div>
 	</footer>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

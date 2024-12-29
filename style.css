@@ -275,20 +275,21 @@ header{
   margin-bottom: 10px;
 }
 
-.footer-newsletter form {
+.footer-newsletter form#inputnews {
   display: flex;
   gap: 10px;
 }
 
-.footer-newsletter input {
+.footer-newsletter input#emailnews {
   flex: 1;
   padding: 10px;
   border: none;
   border-radius: 4px;
   font-size: 14px;
+  width: 200px;
 }
 
-.footer-newsletter button {
+.footer-newsletter a {
   background-color: #D4AF37;
   color: #FFFFFF;
   border: none;
@@ -299,7 +300,7 @@ header{
   transition: background 0.3s ease;
 }
 
-.footer-newsletter button:hover {
+.footer-newsletter a:hover {
   background-color: #B28F2C;
 }
 
