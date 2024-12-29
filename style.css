@@ -1,0 +1,324 @@
+/* Paleta de cores */
+:root {
+  --white: #FFFFFF; /* Cor de fundo principal */
+  --soft-beige: #F7F2ED; /* Fundo ou áreas secundárias */
+  --pastel-pink: #F9E4E8; /* Acentos e botões */
+  --muted-gold: #D4AF37; /* Destaques e bordas */
+  --light-gray: #E0E0E0; /* Divisores ou textos menos destacados */
+  --text-dark: #333333; /* Texto principal */
+}
+
+/* Exemplo de aplicação */
+*{
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--soft-beige);
+  color: var(--text-dark);
+  font-family: 'Poppins';
+}
+
+button {
+
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+
+
+input {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--muted-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+header{
+  background-color: var(--light-gray);
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* Estilização do container do header */
+.header-container {
+  display: flex; /* Ativa o flexbox */
+  justify-content: space-between; /* Espaçamento igual entre as divs */
+  align-items: center; /* Centraliza os itens verticalmente */
+  max-width: 1200px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o header na página */
+}
+
+/* Logo */
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Links do menu */
+.header-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-links a {
+  margin-left: 20px; /* Espaçamento horizontal entre os itens */
+  text-decoration: none;
+  color: var(--text-dark); /* Cor do texto */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+  color: var(--muted-gold); /* Cor ao passar o mouse */
+}
+
+/* Botão de login */
+.login-button a {
+  text-decoration: none;
+  color: white;
+  background-color:var(--muted-gold); /* Cor do botão */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button a:hover {
+  background-color:var(--soft-beige); /* Cor ao passar o mouse */
+  color: var(--text-dark);
+}
+#cards {
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo para destaque */
+  text-align: center; /* Garante que os conteúdos dentro fiquem centralizados */
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite quebra de linha caso a tela seja pequena */
+  gap: 20px; /* Espaçamento entre os cards */
+  margin-bottom: 20px;
+}
+.course-card {
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* Fundo branco para contraste */
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  width: calc(33.333% - 20px); /* 3 cards por linha */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Cabeçalho com a imagem */
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #D4AF37; /* Linha destacada */
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Título */
+.card-body h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.card-body p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Botão */
+.card-body a {
+  font-size: 14px;
+  transition: background-color 0.3s ease; 
+  border-color: var(--muted-gold);
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.card-body a:hover {
+  background-color: var(--muted-gold);
+  transition: backgroud-color 0.3s ease;
+  text-decoration: none;
+  color: var(--white);
+  
+}
+.banner-container img{
+  width: 100%;
+  /* Estilo geral do footer */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .course-card {
+    width: calc(50% - 20px); /* 2 cards por linha */
+  }
+}
+
+@media (max-width: 480px) {
+  .course-card {
+    width: 100%; /* 1 card por linha */
+  }
+}
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo da seção da logo */
+.footer-logo {
+  max-width: 30%;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #CCCCCC;
+}
+
+/* Estilo da seção de links */
+.footer-links {
+  max-width: 30%;
+}
+
+.footer-links h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #CCCCCC;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #D4AF37; /* Destaque ao passar o mouse */
+}
+
+/* Estilo da seção de newsletter */
+.footer-newsletter {
+  max-width: 30%;
+}
+
+.footer-newsletter h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter form {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.footer-newsletter button {
+  background-color: #D4AF37;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-newsletter button:hover {
+  background-color: #B28F2C;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo, .footer-links, .footer-newsletter {
+    max-width: 100%;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input, .footer-newsletter button {
+    width: 100%;
+  }
+}
