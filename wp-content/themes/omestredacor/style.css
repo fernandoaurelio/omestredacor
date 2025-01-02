@@ -1,0 +1,583 @@
+/*
+Theme Name: O Mestre da Cor
+Author: Fernando Aurelio
+Author URI: https://github.com/fernandoaurelio/omestredacor/tree/master
+Description: Tema do portal educacional O Mestre da Cor
+Version: 1.2
+*/
+
+/* Paleta de cores */
+:root {
+  --white: #FFFFFF; /* Cor de fundo principal */
+  --soft-beige: #F7F2ED; /* Fundo ou áreas secundárias */
+  --pastel-pink: #F9E4E8; /* Acentos e botões */
+  --muted-gold: #D4AF37; /* Destaques e bordas */
+  --light-gray: #E0E0E0; /* Divisores ou textos menos destacados */
+  --text-dark: #333333; /* Texto principal */
+}
+
+/* Exemplo de aplicação */
+*{
+  margin: 0;
+  padding: 0;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--soft-beige);
+  color: var(--text-dark);
+  font-family: 'Poppins';
+}
+
+button {
+
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h5{
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+input {
+  background-color: var(--white);
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+  padding: 10px;
+  color: var(--text-dark);
+}
+
+a {
+  color: var(--muted-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+#custom-header{
+  background-color: var(--light-gray);
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* Estilização do container do header */
+.header-container {
+  display: flex; /* Ativa o flexbox */
+  justify-content: space-between; /* Espaçamento igual entre as divs */
+  align-items: center; /* Centraliza os itens verticalmente */
+  max-width: 1200px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o header na página */
+}
+
+/* Logo */
+.header-logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Links do menu */
+.header-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-links a {
+  margin-left: 20px; /* Espaçamento horizontal entre os itens */
+  text-decoration: none;
+  color: var(--text-dark); /* Cor do texto */
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.header-links a:hover {
+  color: var(--muted-gold); /* Cor ao passar o mouse */
+}
+
+/* Botão de login */
+.login-button a {
+  text-decoration: none;
+  color: white;
+  background-color:var(--muted-gold); /* Cor do botão */
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-button a:hover {
+  background-color:var(--soft-beige); /* Cor ao passar o mouse */
+  color: var(--text-dark);
+}
+/* Estilo geral do modal */
+.modal-custom {
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  border: none;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho do modal */
+.modal-header-custom {
+  border-bottom: none;
+  text-align: center;
+  padding-bottom: 0;
+}
+
+.modal-header-custom .modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+}
+
+/* Estilo dos inputs */
+.form-input {
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 14px;
+  color: #333333;
+  background-color: #FFFFFF;
+  box-shadow: none;
+}
+
+.form-input:focus {
+  border-color: #D4AF37;
+  outline: none;
+}
+
+/* Link de cadastro */
+.form-link {
+  color: #D4AF37;
+  font-size: 14px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.form-link:hover {
+  color: #B28F2C;
+}
+
+/* Botão de enviar */
+.btn-custom {
+  background-color: #D4AF37;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #B28F2C;
+}
+#cards {
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo para destaque */
+  text-align: center; /* Garante que os conteúdos dentro fiquem centralizados */
+}
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Permite quebra de linha caso a tela seja pequena */
+  gap: 20px; /* Espaçamento entre os cards */
+  margin-bottom: 20px;
+}
+.course-card {
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  background-color: #FFFFFF; /* Fundo branco para contraste */
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+  width: calc(33.333% - 20px); /* 3 cards por linha */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.course-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+}
+
+/* Cabeçalho com a imagem */
+.card-header img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 3px solid #D4AF37; /* Linha destacada */
+}
+
+/* Corpo do card */
+.card-body {
+  padding: 15px;
+  text-align: center;
+}
+
+/* Título */
+.card-body h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+/* Descrição */
+.card-body p {
+  font-size: 16px;
+  color: #666666;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+/* Botão */
+.card-body a {
+  font-size: 14px;
+  transition: background-color 0.3s ease; 
+  border-color: var(--muted-gold);
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+.card-body a:hover {
+  background-color: var(--muted-gold);
+  transition: backgroud-color 0.3s ease;
+  text-decoration: none;
+  color: var(--white);
+  
+}
+.banner-container img{
+  width: 100%;
+  /* Estilo geral do footer */
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .course-card {
+    width: calc(50% - 20px); /* 2 cards por linha */
+  }
+}
+
+@media (max-width: 480px) {
+  .course-card {
+    width: 100%; /* 1 card por linha */
+  }
+}
+.aula-video-conteudo{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding:40px;
+}
+.aula-video iframe{
+  margin: 0 auto;
+  display: block;
+}
+#aula{
+  background-color: var(--light-gray);
+}
+
+/* Seção principal */
+.extra-content-section {
+    display: flex;
+    gap: 30px;
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+
+    align-items: flex-start;
+}
+
+/* Área de downloads */
+.extra-content-downloads {
+    flex: 1;
+    position: sticky;
+    top: 20px;
+    background-color: var(--light-gray);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.extra-content-downloads h3 {
+    font-size: 1.5rem;
+    color: var(--muted-gold);
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--muted-gold);
+    padding-bottom: 10px;
+}
+
+.extra-content-downloads ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.extra-content-downloads li {
+    margin-bottom: 15px;
+}
+
+.extra-content-downloads a {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--text-dark);
+    padding: 10px 15px;
+    display: block;
+    background-color: var(--white);
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+}
+
+.extra-content-downloads a:hover {
+    background-color: var(--pastel-pink);
+    color: var(--black);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Área de texto */
+.extra-content-text {
+    flex: 3;
+}
+
+.extra-content-text h2 {
+    font-size: 2rem;
+    color: var(--muted-gold);
+    margin-bottom: 20px;
+}
+
+.extra-content-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: var(--text-dark);
+}
+
+.trilha-conteudos-total{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.trilha-conteudos-total h5{
+  text-align: center;
+  padding: 15px;
+}
+.cards-trilha-secao {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+
+}
+.card-trilha-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  width: 90%;
+  margin-bottom: 50px;
+}
+
+
+.card-trilha {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.card-trilha:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.6);
+  cursor: pointer;
+}
+
+.card-trilha-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-trilha:hover .card-trilha-overlay {
+  opacity: 1;
+}
+
+.card-trilha-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.card-trilha-summary {
+  font-size: 0.9rem;
+  line-height: 1.3;
+}
+
+.card-trilha-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: var(--muted-gold);
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.site-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #333333;
+  color: #FFFFFF;
+  padding: 40px;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo da seção da logo */
+.footer-logo {
+  max-width: 30%;
+}
+
+.footer-logo img {
+  max-width: 150px;
+  margin-bottom: 10px;
+}
+
+.footer-logo p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #CCCCCC;
+}
+
+/* Estilo da seção de links */
+.footer-links {
+  max-width: 30%;
+}
+
+.footer-links h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px;
+}
+
+.footer-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #CCCCCC;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #D4AF37; /* Destaque ao passar o mouse */
+}
+
+/* Estilo da seção de newsletter */
+.footer-newsletter {
+  max-width: 30%;
+}
+
+.footer-newsletter h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+.footer-newsletter p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #CCCCCC;
+  margin-bottom: 10px;
+}
+
+.footer-newsletter form#inputnews {
+  display: flex;
+  gap: 10px;
+}
+
+.footer-newsletter input#emailnews {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 200px;
+}
+
+.footer-newsletter a {
+  background-color: #D4AF37;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.footer-newsletter a:hover {
+  background-color: #B28F2C;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .site-footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-logo, .footer-links, .footer-newsletter {
+    max-width: 100%;
+  }
+
+  .footer-newsletter form {
+    flex-direction: column;
+  }
+
+  .footer-newsletter input, .footer-newsletter button {
+    width: 100%;
+  }
+}
